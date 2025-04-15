@@ -1,49 +1,18 @@
-# create-ts-package-template
+# BaseWarp
 
-Typescript template for creating and publishing with rollup, typescript, jest, eslint, prettier, and husky
+A TypeScript-based Minecraft datapack generator that allows you to write your datapack functions in TypeScript and compile them into `.mcfunction` files. It provides utilities for creating commands and managing datapack structures, making it easier to develop complex datapacks with the benefits of TypeScript's type safety and modern development features.
+
+### Features
+
+- Write Minecraft commands using TypeScript
+- Automatic compilation to `.mcfunction` files
+- Built-in command creation utilities
+- Directory structure management for datapacks
+- TypeScript type safety and IntelliSense support
 
 ## Usage
 
 ```sh
-npx create-ts-package-template package-name
+pnpm install
+pnpm build
 ```
-
-## React
-
-To add React linting and compatibility for publishing things like components, you can specify the
-`--react` flag during creation:
-
-```sh
-npx create-ts-package-template package-name --react
-```
-
-You can then `cd` into the `package-name` directory and `build`, `test` or `publish`
-
-## Building
-
-```sh
-yarn build
-```
-
-Or, to minify and remove source maps:
-
-```sh
-yarn build-production
-```
-
-## Testing
-
-```sh
-yarn test
-```
-
-Note: If publishing for a web app, you may need the `jsdom` `testEnvironment` in the `jest.config.js`
-See https://jestjs.io/docs/configuration#testenvironment-string
-
-## Publishing
-
-```sh
-yarn publish
-```
-
-This should build the package with rollup, use the specified version, and publish the results.
