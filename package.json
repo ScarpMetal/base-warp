@@ -1,0 +1,55 @@
+{
+  "name": "base-warp",
+  "version": "0.0.1",
+  "description": "Typescript template for creating and publishing with rollup, typescript, jest, eslint, prettier, and husky",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "prebuild": "pnpm clean",
+    "build": "rollup -c",
+    "format": "prettier --write 'src/**/*'",
+    "build-production": "PRODUCTION=true pnpm run build",
+    "lint": "eslint --fix 'src/**/*.ts'",
+    "test": "jest",
+    "prepare": "husky install",
+    "prepublishOnly": "pnpm run build-production",
+    "clean": "rimraf lib dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScarpMetal/base-warp.git"
+  },
+  "keywords": [
+    "minecraft",
+    "datapack",
+    "resourcepack",
+    "basewarp"
+  ],
+  "author": "ScarpMetal (https://github.com/ScarpMetal)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScarpMetal/base-warp/issues"
+  },
+  "homepage": "https://github.com/ScarpMetal/base-warp#base-warp",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.3.1",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^18.19.86",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.57.1",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.10",
+    "rollup": "^2.79.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "ts-jest": "^29.3.2",
+    "typescript": "^4.9.5"
+  }
+}
